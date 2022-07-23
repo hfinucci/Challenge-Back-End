@@ -20,7 +20,10 @@ app.post('/api/v1/votes', jsonParser, (request, response) => {
 
 app.get('/api/v1/votes/heroes', (request, response) => {
     const result = HeroesService.getHeroesByVotes()
-    response.send(result)
+    if (result.length != 0)
+        response.send(result)
+    else 
+        response.send("No hero was voted")
 })
 
 app.get('/api/v1/votes/publisher', (request, response) => {
