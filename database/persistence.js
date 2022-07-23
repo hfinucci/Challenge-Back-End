@@ -28,6 +28,12 @@ class Persistence {
         return map
     }
 
+    // Es importante destacar que en un proyecto real en la capa de persistencia (base de datos) se encuentran
+    // las funciones que hacen queries a la DB, como por ejemplo SQL en el caso de una base de datos relacional
+
+    // Decidi optar por una implementacion enfocada en maximizar la memoria, en vez de un diseño 
+    // donde se tiene que computar menos pero donde se almacena informacion redundante
+    
     static info = [{
         "superhero":"Batman", 
         "publisher":"DC Comics", 

@@ -7,6 +7,9 @@ const app = express()
 
 var jsonParser = bodyParser.json()
 
+
+// ENDPOINTS 
+
 app.post('/api/v1/votes', jsonParser, (request, response) => {
     const result = HeroesService.incrementVote(request.body['superhero'])
     if (result == -1)
